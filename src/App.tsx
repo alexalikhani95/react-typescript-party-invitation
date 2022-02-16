@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
+import List from "./components/List";
 import "./App.css";
 
 interface PeopleState {
@@ -18,6 +18,7 @@ const App = () => {
   return (
     <div className="App">
       <h1>People invited to the Party</h1>
+      <List people={people}/>
     </div>
   );
 };
