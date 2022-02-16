@@ -4,6 +4,7 @@ import "./App.css";
 
 interface PeopleState {
   people: {
+    id: number,
     name: string;
     age: number;
     url: string;
@@ -12,7 +13,15 @@ interface PeopleState {
 }
 
 const App = () => {
-  const [people, setPeople] = useState<PeopleState["people"]>([])
+  const [people, setPeople] = useState<PeopleState["people"]>([
+    {
+      id: 1,
+      name: "Thierry Henry",
+      url: "https://i2-prod.dailystar.co.uk/incoming/article19289670.ece/ALTERNATES/s615b/Thierry-Henry-1403994",
+      age: 40,
+      note: "Greatest striker in premier league era"
+    }
+  ])
 
 
   return (
