@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import List from "./components/List";
 import "./App.css";
+import AddToList from "./components/AddToList";
 
-interface PeopleState {
+export interface PeopleState {
   people: {
-    id: number,
+    id?: number,
     name: string;
     age: number;
     url: string;
@@ -28,6 +29,7 @@ const App = () => {
     <div className="App">
       <h1>People invited to the Party</h1>
       <List people={people}/>
+      <AddToList people={people} setPeople={setPeople}/>
     </div>
   );
 };
